@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.swufe.newlife.FrameActicity">
+    <fragment
+        android:id="@+id/fragment_shouye"
+        android:name="com.swufe.newlife.ShouFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10"/>
+    <fragment
+        android:id="@+id/fragment_guanzhu"
+        android:name="com.swufe.newlife.GuanFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10"/>
+    <fragment
+        android:id="@+id/fragment_faxian"
+        android:name="com.swufe.newlife.FaFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10"/>
+    <fragment
+        android:id="@+id/fragment_wode"
+        android:name="com.swufe.newlife.WoFragment"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10"/>
+
+    <RadioGroup
+        android:id="@+id/bottomGroup"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/btn_Shouye"
+            android:button="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="5"
+            android:drawableTop="@drawable/shouye"
+            android:text="@string/shouye" />
+
+        <RadioButton
+            android:id="@+id/btn_Guanzhu"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:drawableTop="@drawable/guanzhu"
+            android:text="@string/guanzhu" />
+
+        <RadioButton
+            android:id="@+id/btn_Faxian"
+            android:button="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="5"
+            android:drawableTop="@drawable/faxian"
+            android:text="@string/faxian" />
+
+        <RadioButton
+            android:id="@+id/btn_Wode"
+            android:button="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:drawableTop="@drawable/wode"
+            android:text="@string/wode" />
+    </RadioGroup>
+
+</LinearLayout>

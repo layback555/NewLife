@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/btn_eat"
+        android:layout_width="179dp"
+        android:layout_height="198dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_toStartOf="@+id/btn_zuo"
+        android:layout_toLeftOf="@+id/btn_zuo"
+        android:background="@mipmap/eat"
+        android:text="" />
+
+    <Button
+        android:id="@+id/btn_zuo"
+        android:layout_width="179dp"
+        android:layout_height="289dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:background="@mipmap/zuo"
+        android:text="" />
+
+    <Button
+        android:id="@+id/btn_you"
+        android:layout_width="180dp"
+        android:layout_height="273dp"
+        android:layout_below="@+id/btn_eat"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="2dp"
+        android:layout_toStartOf="@+id/btn_le"
+        android:layout_toLeftOf="@+id/btn_le"
+        android:background="@mipmap/you"
+        android:text="" />
+
+    <Button
+        android:id="@+id/btn_le"
+        android:layout_width="179dp"
+        android:layout_height="180dp"
+        android:layout_below="@+id/btn_zuo"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="2dp"
+        android:background="@mipmap/le"
+        android:text="" />
+</RelativeLayout>
