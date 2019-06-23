@@ -13,12 +13,6 @@
         android:layout_height="match_parent"
         android:layout_weight="10"/>
     <fragment
-        android:id="@+id/fragment_guanzhu"
-        android:name="com.swufe.newlife.GuanFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="10"/>
-    <fragment
         android:id="@+id/fragment_faxian"
         android:name="com.swufe.newlife.FaFragment"
         android:layout_width="match_parent"
@@ -42,26 +36,17 @@
         <RadioButton
             android:id="@+id/btn_Shouye"
             android:button="@null"
+            android:background="@color/color4Pink"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
             android:layout_weight="5"
             android:drawableTop="@drawable/shouye"
             android:text="@string/shouye" />
-
-        <RadioButton
-            android:id="@+id/btn_Guanzhu"
-            android:button="@null"
-            android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="5"
-            android:drawableTop="@drawable/guanzhu"
-            android:text="@string/guanzhu" />
-
         <RadioButton
             android:id="@+id/btn_Faxian"
             android:button="@null"
+            android:background="@color/color4Pink"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -72,6 +57,7 @@
         <RadioButton
             android:id="@+id/btn_Wode"
             android:button="@null"
+            android:background="@color/color4Pink"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="5"

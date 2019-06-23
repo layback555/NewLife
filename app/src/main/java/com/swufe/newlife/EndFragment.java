@@ -29,7 +29,7 @@ public class EndFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         Intent intent;
-        intent = new Intent(getActivity(),FrameActicity.class);
+        intent = new Intent(getActivity(),LoginActivity.class);
         startActivity(intent);
     }
 }

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="83dp"
+        android:layout_weight="0.9"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/f_name"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+            android:text="小明"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/f_question"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:height="35dp"
+            android:layout_marginLeft="5dp"
+            android:text="西财什么专业最好?"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/f_time"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:ems="10" />
+
+        <Button
+            android:id="@+id/dianzan"
+            android:layout_width="49dp"
+            android:layout_height="33dp"
+            android:layout_gravity="center"
+            android:background="@mipmap/dianzan" />
+
+
+    </LinearLayout>
+</LinearLayout>
