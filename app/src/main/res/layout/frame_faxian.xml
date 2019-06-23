@@ -3,21 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:background="@mipmap/pink2"
     android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/fa_title"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:text="*发现身边的故事*"
-        android:textStyle="bold"
-        android:textSize="20sp"
         android:gravity="center|bottom"
-        android:textColor="@color/color3Pink"/>
+        android:layout_marginTop="8dp"
+        android:text="*发现身边的故事*"
+        android:textColor="@color/color3Pink"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <ListView
         android:id="@+id/l_record"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:divider="@color/color4Pink"

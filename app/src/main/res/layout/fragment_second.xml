@@ -6,12 +6,10 @@
     tools:context=".SecondFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <ImageView
+    <TextView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="449dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:src="@mipmap/second" />
+        android:layout_height="match_parent"
+        android:background="@mipmap/third" />
 
 </FrameLayout>

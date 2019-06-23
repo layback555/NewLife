@@ -18,7 +18,7 @@ public class MyAdapter extends ArrayAdapter {
     public View getView(int position, View convertView,ViewGroup parent) {
         View itemView=convertView;
         if(itemView==null){
-            itemView=LayoutInflater.from(getContext()).inflate(R.layout.activity_view,parent,false);
+            itemView=LayoutInflater.from(getContext()).inflate(R.layout.item_view,parent,false);
         }
         Map<String,String> map=(Map<String,String>)getItem(position);
         TextView name=(TextView)itemView.findViewById(R.id.tvname);

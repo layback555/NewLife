@@ -41,7 +41,7 @@ public class TvseriesActivity extends ListActivity implements Runnable{
                 if (msg.what == 7) {
                     listItems= (ArrayList<HashMap<String, String>>)msg.obj;
                     listItemAdapter = new SimpleAdapter(TvseriesActivity.this, listItems,//listItems数据源
-                            R.layout.activity_view,//ListItem的XML布局实现
+                            R.layout.item_view,//ListItem的XML布局实现
                             new String[]{"ItemTitle", "ItemDetail","ItemType"},
                             new int[]{R.id.tvname, R.id.tvactor,R.id.tvtype}
                     );
@@ -62,7 +62,7 @@ public class TvseriesActivity extends ListActivity implements Runnable{
             Log.i(TAG,"run:map"+map);
         }  // 生成适配器的 Item 和动态数组对应的元素
         listItemAdapter = new SimpleAdapter(this, listItems, // listItems 数据源
-                R.layout.activity_view, // ListItem 的 XML 布局实现
+                R.layout.item_view, // ListItem 的 XML 布局实现
                 new String[]{"ItemTitle", "ItemDetail","ItemType"},
                 new int[]{R.id.tvname, R.id.tvactor,R.id.tvtype}
                 );
@@ -71,12 +71,12 @@ public class TvseriesActivity extends ListActivity implements Runnable{
         List<HashMap<String,String>> retList=new ArrayList<HashMap<String, String>>();
         Document doc=null;
         try {
-            Thread.sleep(9000);
+            Thread.sleep(5000);
             Log.i(TAG,"run:run...");
             doc = Jsoup.connect("https://www.88ys.cc/lianxuju/2.html").get();
             Log.i(TAG, "run:title" + doc.title());
             Elements lests = doc.getElementsByTag("li");
-              for(int i=40;i<=lests.size();i++){
+              for(int i=40;i<=retList.size();i++){
                 Element lest=lests.get(i);
                 //Log.i(TAG,"run:list["+i+"]"+lest);
                 Elements ps=lest.getElementsByTag("p");
@@ -103,7 +103,6 @@ public class TvseriesActivity extends ListActivity implements Runnable{
                   map.put("ItemType", tv_type);
                   Log.i(TAG,"run:map="+map);
                   retList.add(map);
-
             }
         } catch (IOException e) {
             e.printStackTrace();

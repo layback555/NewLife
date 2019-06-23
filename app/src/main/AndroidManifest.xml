@@ -24,8 +24,7 @@
         </activity>
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".TvActivity" />
-        <activity android:name=".TvseriesActivity" />
+        <activity android:name=".TvseriesActivity"  />
         <activity android:name=".QueActivity" />
         <activity android:name=".GeQianActivity" />
         <activity android:name=".PasswordActivity"></activity>

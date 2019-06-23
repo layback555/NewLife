@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout"
-    android:background="@color/color4Pink"
+    android:background="@mipmap/pink1"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     tools:layout_editor_absoluteY="81dp">
@@ -14,7 +14,7 @@
         android:layout_width="389dp"
         android:layout_height="167dp"
         android:layout_marginTop="0dp"
-        android:background="@mipmap/jingxiang"
+        android:background="@mipmap/tree"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

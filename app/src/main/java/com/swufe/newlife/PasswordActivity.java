@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -21,6 +22,7 @@ public class PasswordActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_password);
 
         SharedPreferences sharedPerferences = getSharedPreferences("register", Context.MODE_PRIVATE);
@@ -34,10 +36,10 @@ public class PasswordActivity extends AppCompatActivity {
         oldpass=oldpassword.getText().toString();
         newpass=newpassword.getText().toString();
         renewpass=renewpassword.getText().toString();
-        if(oldpass.equals(old_pass)) {
+
             if (newpass.equals(renewpass)) {
-                SharedPreferences ps = getSharedPreferences("regis", Activity.MODE_PRIVATE);
-                SharedPreferences.Editor editor = ps.edit();
+                SharedPreferences sharedPreferences = getSharedPreferences("regis", Activity.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("user_password", newpass);
                 editor.commit();
 
@@ -47,8 +49,5 @@ public class PasswordActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "两次输入密码不一致，请重新输入", Toast.LENGTH_SHORT).show();
             }
         }
-        else {
-            Toast.makeText(getApplicationContext(), "输入的原密码不正确", Toast.LENGTH_SHORT).show();
-        }
-    }
+
 }

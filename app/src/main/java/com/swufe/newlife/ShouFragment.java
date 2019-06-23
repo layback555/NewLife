@@ -17,7 +17,7 @@ public class ShouFragment extends Fragment {
     }
     public void openTv(View v) {
         Intent intent;
-        intent = new Intent(getActivity(),TvActivity.class);
+        intent = new Intent(getActivity(),TvseriesActivity.class);
         startActivity(intent);
     }
 }

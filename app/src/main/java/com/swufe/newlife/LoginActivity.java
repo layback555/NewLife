@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -20,6 +21,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_login);
         lname = (EditText) findViewById(R.id.user_name);
         lpassword = (EditText) findViewById(R.id.user_password);
@@ -35,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
             Intent intent;
             intent = new Intent(this,FrameActicity.class);
             Bundle b=new Bundle();
-            b.putString("user-name",uname);
+            b.putString("user-name",usename);
             intent.putExtras(b);
             startActivity(intent);
         }
