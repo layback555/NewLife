@@ -66,9 +66,10 @@
             android:layout_marginTop="6dp"
             android:layout_marginBottom="6dp"
             android:background="@color/color4Pink"
+            android:gravity="center|left"
+            android:onClick="openRecord"
             android:text="   我的记录"
-            android:textSize="15sp"
-            android:gravity="center|left" />
+            android:textSize="15sp" />
 
         <Button
             android:id="@+id/btn_myfaxian"

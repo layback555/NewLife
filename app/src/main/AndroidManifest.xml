@@ -24,10 +24,14 @@
         </activity>
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".TvseriesActivity"  />
+        <activity android:name=".TvseriesActivity">
+
+        </activity>
         <activity android:name=".QueActivity" />
         <activity android:name=".GeQianActivity" />
-        <activity android:name=".PasswordActivity"></activity>
+        <activity android:name=".PasswordActivity" />
+        <activity android:name=".VideoActivity" />
+        <activity android:name=".RecordActivity"></activity>
     </application>
 
 </manifest>

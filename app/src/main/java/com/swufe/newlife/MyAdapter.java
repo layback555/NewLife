@@ -7,11 +7,12 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class MyAdapter extends ArrayAdapter {
-    public MyAdapter(Context context, int resource, List<Map<String, String>> list) {
+    public MyAdapter(Context context, int resource, List<HashMap<String, String>> list) {
         super(context, resource, list);
     }
 

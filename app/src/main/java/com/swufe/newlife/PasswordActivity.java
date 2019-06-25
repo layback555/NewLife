@@ -38,7 +38,7 @@ public class PasswordActivity extends AppCompatActivity {
         renewpass=renewpassword.getText().toString();
 
             if (newpass.equals(renewpass)) {
-                SharedPreferences sharedPreferences = getSharedPreferences("regis", Activity.MODE_PRIVATE);
+                SharedPreferences sharedPreferences = getSharedPreferences("register", Activity.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("user_password", newpass);
                 editor.commit();

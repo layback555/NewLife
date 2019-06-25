@@ -15,21 +15,21 @@
             android:id="@+id/tvname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+          android:textSize="18sp"
             android:text="TextView" />
 
         <TextView
             android:id="@+id/tvactor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:textSize="3sp"
             android:text="TextView" />
 
         <TextView
             android:id="@+id/tvtype"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:textSize="15sp"
             android:text="TextView" />
     </LinearLayout>
 
@@ -39,13 +39,14 @@
         android:orientation="vertical">
 
 
-
-    <Button
-        android:id="@+id/btn_record"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="记录" />
+        <Button
+            android:id="@+id/btn_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:onClick="onClickRe"
+            android:text="记录" />
     </LinearLayout>
 
 </LinearLayout>

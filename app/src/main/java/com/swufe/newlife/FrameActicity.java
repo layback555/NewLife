@@ -69,14 +69,22 @@ public class FrameActicity extends FragmentActivity {
          wode.setText(wo+"\n"+"Welcome to the NewLife!");*/
            }
     public void openTv(View v) {
-        Intent intent= new Intent();
+        /*Intent intent= new Intent();
         intent.setData(Uri.parse("http://www.iqiyi.com/dianshiju/"));
         intent.setAction(Intent.ACTION_VIEW);
-        this.startActivity(intent);
+        this.startActivity(intent);*/
+        Intent Ac;
+        Ac = new Intent(this,TvseriesActivity.class);
+        startActivity(Ac);
     }
     public void openAccount(View v) {
         Intent Ac;
         Ac = new Intent(this,LoginActivity.class);
+        startActivity(Ac);
+    }
+    public void openRecord(View v) {
+        Intent Ac;
+        Ac = new Intent(this,RecordActivity.class);
         startActivity(Ac);
     }
     public void openQue(View v) {

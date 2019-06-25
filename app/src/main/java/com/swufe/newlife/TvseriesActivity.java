@@ -1,11 +1,14 @@
 package com.swufe.newlife;
 
-import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.widget.SimpleAdapter;
+import android.view.View;
+import android.view.Window;
+import android.widget.ListView;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -17,66 +20,47 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class TvseriesActivity extends ListActivity implements Runnable{
+public class TvseriesActivity extends AppCompatActivity implements Runnable{
     String tv_title="";
     String tv_actor="";
     String tv_type="";
     private static final String TAG = "TvseriesActivity";
     Handler handler;
-    public ArrayList<HashMap<String, String>> listItems; // 存放文字、图片信息
-    public SimpleAdapter listItemAdapter;
+    public List<HashMap<String, String>> listItems; // 存放文字、图片信息
+    MyAdapter adapter;
+    ListView list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initListView();
-        //MyAdapter myAdapter = new MyAdapter(this, R.layout.activity_view, listItems);
-        this.setListAdapter(listItemAdapter);
-
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.activity_tv);
+        list=(ListView)findViewById(R.id.tv_list);
         Thread t=new Thread(this);
         t.start();
 
         handler = new Handler() {
             public void handleMessage(Message msg) {
                 if (msg.what == 7) {
-                    listItems= (ArrayList<HashMap<String, String>>)msg.obj;
-                    listItemAdapter = new SimpleAdapter(TvseriesActivity.this, listItems,//listItems数据源
-                            R.layout.item_view,//ListItem的XML布局实现
-                            new String[]{"ItemTitle", "ItemDetail","ItemType"},
-                            new int[]{R.id.tvname, R.id.tvactor,R.id.tvtype}
-                    );
-                    setListAdapter(listItemAdapter);
+                    list=(ListView)findViewById(R.id.tv_list);
+                    listItems=(List<HashMap<String, String>>)msg.obj;
+                    adapter = new MyAdapter(TvseriesActivity.this,R.layout.item_view,listItems);
+                    list.setAdapter(adapter);
                 }
                 super.handleMessage(msg);
             }
         };
 }
-    public void initListView() {
-        listItems = new ArrayList<HashMap<String, String>>();
-        for (int i = 0; i < 10; i++) {
-            HashMap<String, String> map = new HashMap<String, String>();
-            map.put("ItemTitle", "Rate： " + i); // 标题文字
-            map.put("ItemDetail", "detail:" + i);
-            map.put("ItemType", "type:" + i); // 详情描述
-            listItems.add(map);
-            Log.i(TAG,"run:map"+map);
-        }  // 生成适配器的 Item 和动态数组对应的元素
-        listItemAdapter = new SimpleAdapter(this, listItems, // listItems 数据源
-                R.layout.item_view, // ListItem 的 XML 布局实现
-                new String[]{"ItemTitle", "ItemDetail","ItemType"},
-                new int[]{R.id.tvname, R.id.tvactor,R.id.tvtype}
-                );
-    }
     public void run() {
         List<HashMap<String,String>> retList=new ArrayList<HashMap<String, String>>();
         Document doc=null;
         try {
-            Thread.sleep(5000);
+            Thread.sleep(3000);
             Log.i(TAG,"run:run...");
             doc = Jsoup.connect("https://www.88ys.cc/lianxuju/2.html").get();
             Log.i(TAG, "run:title" + doc.title());
             Elements lests = doc.getElementsByTag("li");
-              for(int i=40;i<=retList.size();i++){
+              for(int i=42;i<=69;i++){
                 Element lest=lests.get(i);
                 //Log.i(TAG,"run:list["+i+"]"+lest);
                 Elements ps=lest.getElementsByTag("p");
@@ -114,4 +98,9 @@ public class TvseriesActivity extends ListActivity implements Runnable{
         handler.sendMessage(msg);
         Log.i(TAG,"run:obj="+msg.obj);
     }
-}
+    public void onClickRe(View btn){
+        Intent rec=new Intent(this,RecordActivity.class);
+        startActivity(rec);
+    }
+    }
+
